@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Expense</title>
+</head>
+<body>
+    <form action="/add-expense" method="POST">
+        <label for="ID">ID:</label>
+        <input type="number" id="ID" name="ID" required><br>
+
+        <label for="Item_ID">Item ID:</label>
+        <input type="number" id="Item_ID" name="Item_ID" required><br>
+
+        <label for="Item_Name">Item Name:</label>
+        <input type="text" id="Item_Name" name="Item_Name" required><br>
+
+        <label for="Item_Type">Item Type:</label>
+        <input type="text" id="Item_Type" name="Item_Type" required><br>
+
+        <label for="Amount">Amount:</label>
+        <input type="number" id="Amount" name="Amount" required><br>
+
+        <label for="Pay_DATE">Pay Date:</label>
+        <input type="datetime-local" id="Pay_DATE" name="Pay_DATE" required><br>
+
+        <label for="Who_Payed">Who Payed:</label>
+        <input type="text" id="Who_Payed" name="Who_Payed" required><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
