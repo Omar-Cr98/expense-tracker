@@ -1,56 +1,67 @@
+/* This will apply to all pages using this CSS file */
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
+    background-color: #f4f4f4;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
 }
 
 .container {
-    background: #fff;
-    padding: 20px;
+    background: white;
+    padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
 }
 
-h1 {
+h1, h2 {
     text-align: center;
     color: #333;
 }
 
-form label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-    color: #555;
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-form input, form button {
+button:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input, select {
     width: 100%;
-    margin-top: 5px;
-    padding: 8px;
+    padding: 10px;
+    margin: 10px 0;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
-form button {
+input[type="submit"] {
     background-color: #28a745;
     color: white;
     font-size: 16px;
-    border: none;
-    margin-top: 15px;
+    cursor: pointer;
 }
 
-form button:hover {
+input[type="submit"]:hover {
     background-color: #218838;
-}
-
-#message {
-    margin-top: 10px;
-    text-align: center;
-    font-size: 14px;
 }

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section {{ section_id }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        .button-group {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .button-group a {
+            text-decoration: none;
+        }
+        .button-group button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .button-group button:hover {
+            background-color: #0056b3;
+        }
+        .action-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .action-container ul {
+            list-style: none;
+            padding: 0;
+        }
+        .action-container li {
+            margin: 10px 0;
+        }
+        .action-container li a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 18px;
+        }
+        .action-container li a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Section {{ section_id }}</h1>
+
+    <main class="action-container">
+        <h2>Select an Action</h2>
+        <ul>
+            {% if section_id == 1 %}
+                <li><a href="{{ url_for('form', action='add') }}"><button>Add Item</button></a></li>
+                <li><a href="{{ url_for('form', action='update') }}"><button>Update Item</button></a></li>
+                <li><a href="{{ url_for('form', action='select') }}"><button>View Items</button></a></li>
+                <li><a href="{{ url_for('form', action='delete') }}"><button>Delete Item</button></a></li>
+                <li><a href="{{ url_for('form', action='select') }}"><button>View Items</button></a></li>
+            {% elif section_id == 2 %}
+
+                <li><a href="{{ url_for('form', action='add') }}"><button>Add Item</button></a></li>
+                <li><a href="{{ url_for('form', action='update') }}"><button>Update Item</button></a></li>
+                <li><a href="{{ url_for('form', action='select') }}"><button>View Items</button></a></li>
+                <li><a href="{{ url_for('form', action='delete') }}"><button>Delete Item</button></a></li>
+                <li><a href="{{ url_for('form', action='select') }}"><button>View Items</button></a></li>
+               
+            {% endif %}
+        </ul>
+    </main>
+</div>
+
+</body>
+</html>
